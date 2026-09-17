@@ -59,19 +59,44 @@ npm install --save-dev stylelint stylelint-config-standard-scss stylelint-config
 * Criação de um arquivo chamado `_variables.scss`. O arquivo foi criado para otimizar o desenvolvimento e gerar uma padronização de cores para a aplicação.
 * Criação do componente Default para padronizar o layout que vai ser exibido. Dentro dele são renderizados o Header e também o conteúdo das demais páginas.
 * Criação do componente Header. Nesse componente utilizei uma mescla de Bootstrap com Material.
-* Adicionada a logo em SVG no componete de Header e realizado tratamento de tamanho com SCSS.
+* Adição da logo em SVG no componete de Header e realizado tratamento de tamanho com SCSS.
 * Ajuste no arquivo `app.component.html` para utilizar o componente `app-default-layout`.
 
 # PR 03 - Cria pagina de Home 
 
 ## O que foi feito?
 
-* Removi o título padrão da aplicação Angular.
-* Adicionei uma a page `Home` utilizando Standalone.
+* Remoção do título padrão da aplicação Angular.
+* Adição da page `Home` utilizando Standalone.
 * Dentro componente de Home assim que usuario acessar a pagina inicial vai ser exibido uma mensagem de boas-vindas com o nome do candidato e data atual.
-* Configurei a `Home` na rota raiz (`/`) dentro do arquivo `app.routes.ts`.
-* Exportei o componente Home para carregamento lazy através do Router.
+* Configuração da `Home` na rota raiz (`/`) dentro do arquivo `app.routes.ts`.
+* Exportação do componente Home para carregamento lazy através do Router.
 
 ## Screenshots
 <img width="1918" height="952" alt="image" src="https://github.com/user-attachments/assets/fbe730c9-45aa-4401-9f83-b83c45a5751c" />
 
+# PR 04 - Cria pagina de Address e o componente AddressSearch
+
+## O que foi feito?
+
+* Adição de uma page chamada `Address`
+* Adição do componente `AddressSearch` para busca de endereço por CEP.
+* Adição validação do formulário de endereço.
+* Adição a dependência `ngx-mask@17` pela necessidade de haver uma máscara para o input de CEP.
+* Configuração da rota `/address`.
+* Atualiza os estilos e variáveis globais da aplicação.
+* Ajustado as cores dos botões e do background do menu.
+* Alterado o tema do Angular Material para `deeppurple-amber`.
+* Exporta os novos componentes da Page pelo `pages/index`.
+
+## Dificuldades
+* Tentei importar alguns componentes do Material, mas o autocomplete do import não funcionou corretamente. Por isso, precisei consultar a documentação na internet para verificar os caminhos exatos dos imports.
+* A definição de tema do Angular Material deu um pouco de trabalho, porque as cores que o documento pede pro botão e pro menu não dá pra simplesmente colocar no mat.define-palette() ele pede uma paleta inteira, não uma cor só, e mesmo criando uma paleta na mão não ia bater certinho com o "escurecer 6% no hover" que o documento pede. Por isso acabei sobrescrevendo essas cores direto, sem depender do tema.
+
+## Comandos utilizados
+
+```bash
+npm install ngx-mask@17
+```
+
+## Screenshots

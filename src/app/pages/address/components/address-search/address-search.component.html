@@ -1,0 +1,16 @@
+<form class="row align-items-start" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div class="col-auto">
+    <mat-form-field class="w-100">
+      <mat-label>Busca por CEP</mat-label>
+      <input matInput placeholder="Ex. 60000-600" formControlName="cep" mask="00000-000" />
+      <mat-error *ngIf="searchForm.controls.cep.invalid && searchForm.controls.cep.touched">
+        Informe um CEP válido.
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="col-auto">
+    <button class="search-button" mat-raised-button type="submit"
+      [disabled]="searchForm.controls.cep.invalid">Buscar</button>
+  </div>
+</form>

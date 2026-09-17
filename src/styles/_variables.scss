@@ -3,5 +3,7 @@
 $sccon-bg: #c4c4c4;
 $sccon-content-bg: #fff;
 $sccon-content-border-radius: 12px;
-$sccon-menu-bg: #fff;
+$sccon-menu-bg: #132745;
 $sccon-button-bg: #d7dbdd;
+$button-bg: #d7dbdd;
+$button-bg-hover: color.adjust($button-bg, $lightness: -6%);

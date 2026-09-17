@@ -6,5 +6,11 @@ export const routes: Routes = [
       loadComponent: () =>
          import('./pages/home')
             .then(m => m.HomeComponent)
+   },
+      {
+      path: 'address',
+      loadComponent: () =>
+         import('./pages/address')
+            .then(m => m.AddressComponent)
    }
 ];
