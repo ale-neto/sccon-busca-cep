@@ -51,3 +51,13 @@ npm install --save-dev prettier eslint-config-prettier
 npm install --save-dev stylelint stylelint-config-standard-scss stylelint-config-prettier-scss
 
 ```
+
+# PR 02 - Cria componente Default e Header
+
+## O que foi feito?
+
+* Criação de um arquivo chamado `_variables.scss`. O arquivo foi criado para otimizar o desenvolvimento e gerar uma padronização de cores para a aplicação.
+* Criação do componente Default para padronizar o layout que vai ser exibido. Dentro dele são renderizados o Header e também o conteúdo das demais páginas.
+* Criação do componente Header. Nesse componente utilizei uma mescla de Bootstrap com Material.
+* Adicionada a logo em SVG no componete de Header e realizado tratamento de tamanho com SCSS.
+* Ajuste no arquivo `app.component.html` para utilizar o componente `app-default-layout`.

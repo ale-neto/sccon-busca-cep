@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as vars;
+
+:host {
+    .default-layout {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: vars.$sccon-bg;
+
+        .layout-content {
+            width: 100%;
+            max-width: 1200px;
+            padding: 32px;
+            background: vars.$sccon-content-bg;
+            border-radius: vars.$sccon-content-border-radius;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+    }
+
+
+}

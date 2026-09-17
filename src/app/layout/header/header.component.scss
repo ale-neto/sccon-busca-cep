@@ -1,0 +1,14 @@
+@use '../../../styles/variables' as vars;
+
+:host {
+    .header-brand {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            max-height: 40px;
+            width: auto;
+            display: block;
+        }
+    }
+}
