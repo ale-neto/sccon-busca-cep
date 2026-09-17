@@ -100,3 +100,7 @@ npm install ngx-mask@17
 ```
 
 ## Screenshots
+<img width="1915" height="957" alt="image" src="https://github.com/user-attachments/assets/ce4fa1b1-01d4-4387-aa73-d027afa5c49a" />
+<img width="1921" height="957" alt="image" src="https://github.com/user-attachments/assets/805a4750-534c-45e2-aa35-ec0202850e7e" />
+
+
