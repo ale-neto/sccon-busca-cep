@@ -9,6 +9,4 @@ import { DefaultLayoutComponent } from './layout';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'sccon-busca-cep';
-}
+export class AppComponent { }

@@ -61,3 +61,16 @@ npm install --save-dev stylelint stylelint-config-standard-scss stylelint-config
 * Criação do componente Header. Nesse componente utilizei uma mescla de Bootstrap com Material.
 * Adicionada a logo em SVG no componete de Header e realizado tratamento de tamanho com SCSS.
 * Ajuste no arquivo `app.component.html` para utilizar o componente `app-default-layout`.
+
+# PR 03 - Cria pagina de Home 
+
+## O que foi feito?
+
+* Removi o título padrão da aplicação Angular.
+* Adicionei uma a page `Home` utilizando Standalone.
+* Dentro componente de Home assim que usuario acessar a pagina inicial vai ser exibido uma mensagem de boas-vindas com o nome do candidato e data atual.
+* Configurei a `Home` na rota raiz (`/`) dentro do arquivo `app.routes.ts`.
+* Exportei o componente Home para carregamento lazy através do Router.
+
+## Screenshots
+
