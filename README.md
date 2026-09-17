@@ -73,4 +73,5 @@ npm install --save-dev stylelint stylelint-config-standard-scss stylelint-config
 * Exportei o componente Home para carregamento lazy através do Router.
 
 ## Screenshots
+<img width="1918" height="952" alt="image" src="https://github.com/user-attachments/assets/fbe730c9-45aa-4401-9f83-b83c45a5751c" />
 
