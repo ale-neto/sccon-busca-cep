@@ -1,4 +1,12 @@
-<section>
+<section class="container py-4">
     <h1 class="h4 mb-3">Busca de Endereços</h1>
-    <app-address-search (search)="addressSearch($event)"></app-address-search>
-</section> 
+    <app-search-address (search)="searchAddress($event)" [loading]="(loading$ | async) ?? false"></app-search-address>
+
+    <ng-container *ngIf="address$ | async as address">
+        {{address | json}}
+    </ng-container>
+
+    <ng-container *ngIf="erro">
+        {{erro | json}}
+    </ng-container>
+</section>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,17 +7,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 @Component({
-  selector: 'app-address-search',
+  selector: 'app-search-address',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, NgxMaskDirective],
   providers: [
     provideNgxMask()
   ],
-  templateUrl: './address-search.component.html',
-  styleUrl: './address-search.component.scss'
+  templateUrl: './search-address.component.html',
+  styleUrl: './search-address.component.scss'
 })
-export class AddressSearchComponent {
+export class SearchAddressComponent {
   @Output() search = new EventEmitter<string>();
+  @Input() loading = false; 
 
   readonly searchForm = new FormGroup({
     cep: new FormControl('', [Validators.required, Validators.pattern(/^\d{8}$/)]),

@@ -1,1 +1,1 @@
-export * from './address-search'
+export * from './search-address'
