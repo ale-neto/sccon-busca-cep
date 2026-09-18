@@ -163,6 +163,14 @@ readonly loading$ = this.loadingSubject.asObservable();
 * > Sobre o tratamento de erros que podem acontecer, deixei essa responsabilidade para a camada de services, e o módulo de Address só exibe qual erro ocorreu. Gosto dessa abordagem porque traz clareza para o usuário e também faz com que o componente apenas consuma o dado de erro, sem precisar saber como ele foi gerado.
 
 ## Screenshots
+<img width="1920" height="952" alt="image" src="https://github.com/user-attachments/assets/7dbb7ecd-feb4-4796-a09f-4b8c520ede24" />
+<img width="1919" height="957" alt="image" src="https://github.com/user-attachments/assets/badccb26-a021-4a5f-866d-f8171f96dd39" />
+<img width="1920" height="950" alt="image" src="https://github.com/user-attachments/assets/01d07a85-3775-4035-980b-cff35faa9387" />
+<img width="1918" height="954" alt="image" src="https://github.com/user-attachments/assets/b61854a6-a488-4f79-ab36-520a89f9b1f5" />
+
+
+
+
 
 
 
