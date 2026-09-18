@@ -1,4 +1,4 @@
-# SCCON Busca CEP
+<img width="1917" height="950" alt="image" src="https://github.com/user-attachments/assets/2c36e2d2-b91f-403d-8122-fc96552ba067" /># SCCON Busca CEP
 
 Esse projeto faz parte de uma etapa do processo seletivo da empresa SCCON para desenvolvedores Front-end, com o objetivo de testar conhecimentos e habilidades na utilização de Angular, CSS/HTML5 e TypeScript.
 
@@ -102,5 +102,30 @@ npm install ngx-mask@17
 ## Screenshots
 <img width="1915" height="957" alt="image" src="https://github.com/user-attachments/assets/ce4fa1b1-01d4-4387-aa73-d027afa5c49a" />
 <img width="1921" height="957" alt="image" src="https://github.com/user-attachments/assets/805a4750-534c-45e2-aa35-ec0202850e7e" />
+
+# PR 05 - Adiciona serviço de busca de endereço por CEP
+
+## O que foi feito?
+
+* Adição do `SearchAddressService` para consultar dados de CEP através da API ViaCEP.
+* Utilizado o `HttpClient` para realizar as requisições.
+* Expõe os estados de endereço e carregamento através de `address$` e `loading$`.
+* Adição do tratamento de erros durante a busca do endereço.
+* Cria o `AddressModel` para representar os dados retornados pela API.
+* Adição de exports dos novos modelos e serviços através dos barrels(`index.ts`).
+* Renomeia `AddressSearchComponent` para `SearchAddressComponent`.
+* Atualizaço do selector e o template do componente.
+* Adição input para controlar o estado de carregamento.
+* Atualiza os exports dos componentes.
+* Refatora o `AddressComponent` para consumir o `SearchAddressService`.
+* Adição exibição dos dados do endereço, estado de carregamento e mensagens de erro.
+* Implementa a chamada de `getSearchAddress` para realizar a busca por CEP.
+* Registra o `provideHttpClient` na configuração da aplicação.
+
+## Screenshots
+<img width="1917" height="950" alt="image" src="https://github.com/user-attachments/assets/d852da29-0fbf-482f-9a8f-20d7d0096e34" />
+<img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/454c2ad4-3ba8-4658-87e7-1e84d87fd067" />
+
+
 
 
