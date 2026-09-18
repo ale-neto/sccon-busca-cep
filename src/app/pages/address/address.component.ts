@@ -21,7 +21,7 @@ export class AddressComponent {
     this.erro = null;
 
     this.service.getSearchAddress(cep).subscribe({
-      error: (err) => (this.erro = err.message ?? 'Não foi possível buscar o CEP.'),
+      error: (err) => (this.erro = err.message),
     });
   }
 }
