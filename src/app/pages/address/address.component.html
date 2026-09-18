@@ -1,12 +1,13 @@
 <section class="container py-4">
     <h1 class="h4 mb-3">Busca de Endereços</h1>
-    <app-search-address (search)="searchAddress($event)" [loading]="(loading$ | async) ?? false"></app-search-address>
 
-    <ng-container *ngIf="address$ | async as address">
-        {{address | json}}
-    </ng-container>
+    <app-search-address (search)="searchAddress($event)" [loading]="loading$ | async"></app-search-address>
 
-    <ng-container *ngIf="erro">
-        {{erro | json}}
-    </ng-container>
+    <div *ngIf="erro" class="alert alert-danger mt-3 text-center">
+        {{ erro }}
+    </div>
+
+    <div class="mt-4">
+        <app-list-address [loading]="loading$ | async"></app-list-address>
+    </div>
 </section>

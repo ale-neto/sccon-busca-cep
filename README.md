@@ -126,6 +126,44 @@ npm install ngx-mask@17
 <img width="1917" height="950" alt="image" src="https://github.com/user-attachments/assets/d852da29-0fbf-482f-9a8f-20d7d0096e34" />
 <img width="1919" height="955" alt="image" src="https://github.com/user-attachments/assets/454c2ad4-3ba8-4658-87e7-1e84d87fd067" />
 
+# PR 06 - Adiciona lista de buscas de CEP
+
+## O que foi feito?
+
+* Atualiza as rotas no `header` para ser possível fazer o redirecionamento de acordo com a opção escolhida no menu.
+* Move o model `Address` para dentro da feature de `Address`.
+* Adição do `HistoryAddressService` para gerenciar o histórico de buscas.
+* Adição de operações para adicionar e remover endereços do histórico.
+* Atualiza o fluxo de busca de CEP para evitar buscas duplicadas.
+* Persiste buscas realizadas com sucesso no histórico.
+* Adiciona tratamento e exibição de erros durante a busca.
+* Implementa a tabela de histórico de endereços na interface.
+* Adiciona na table um botão para remover endereços do histórico diretamente na tela.
+
+## Decisões Técnicas
+
+> *OBS: O foco dessa feature foi entregar quase todos os requisitos solicitados no teste.*
+
+* Para o componente de listagem, decidi utilizar o Angular Material, por já ter todo o tratamento visual e de manipulação de uma tabela prontos. Ou seja, para otimizar melhor o tempo, achei que a melhor saída seria usar o `mat-table`.
+* Ainda sobre o componente de listagem: decidi usar uma abordagem não muito comum no meu dia a dia, que é o `trackBy`. Estudando sobre isso, vi que é uma ótima opção quando estamos lidando com listas, porque ele evita que o Angular re-renderize linhas que não mudaram quando o array é atualizada, só o que realmente mudou é atualizado no DOM.
+* Nos serviços `search-address` e `history-address`, decidi utilizar variáveis `Observable` porque, caso ocorra alguma alteração, o Angular, por meio do Change Detection, identifica automaticamente que houve mudança e atualiza essa variável em todos os componentes que a estão consumindo.
+* Usei o `BehaviorSubject` do RxJS nos dois serviços pelo mesmo motivo: além de já ter um valor inicial disponível (diferente de um `Observable` comum, que só emite algo após uma ação), ele permite que qualquer componente que se inscreva depois já receba o último valor emitido, sem precisar esperar uma nova mudança acontecer.
+
+## Destaque
+
+* > Gosto muito da abordagem de utilizar um Observable `loading$`, que aprendi na empresa Monkey. Vou utilizá-lo para gerenciar o estado de carregamento do serviço: enquanto a API não retorna nada, mantenho o loading = true, assim é possível mostrar algo visual para que o user tenha ciência do que está acontecendo e, claro, evitar ações desnecessárias que o user pode tomar, como clicar várias vezes no mesmo botão para a mesma ação.
+
+```bash
+private readonly loadingSubject = new BehaviorSubject<boolean>(false);
+readonly loading$ = this.loadingSubject.asObservable();
+```
+
+* > Outra decisão adotada foi a utilização do `:host {}` nos arquivos SCSS dos componentes. Essa abordagem permite estilizar o elemento host do próprio componente, mantendo os estilos encapsulados e evitando a necessidade de utilizar seletores globais ou aplicar estilos diretamente no componente pai.
+
+* > Sobre o tratamento de erros que podem acontecer, deixei essa responsabilidade para a camada de services, e o módulo de Address só exibe qual erro ocorreu. Gosto dessa abordagem porque traz clareza para o usuário e também faz com que o componente apenas consuma o dado de erro, sem precisar saber como ele foi gerado.
+
+## Screenshots
+
 
 
 

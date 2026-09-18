@@ -7,8 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 @Component({
-  selector: 'app-search-address',
   standalone: true,
+  selector: 'app-search-address',
   imports: [CommonModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule, NgxMaskDirective],
   providers: [
     provideNgxMask()
@@ -18,8 +18,8 @@ import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 })
 export class SearchAddressComponent {
   @Output() search = new EventEmitter<string>();
-  @Input() loading = false; 
-
+  @Input() loading: boolean | null = false;
+  
   readonly searchForm = new FormGroup({
     cep: new FormControl('', [Validators.required, Validators.pattern(/^\d{8}$/)]),
   });

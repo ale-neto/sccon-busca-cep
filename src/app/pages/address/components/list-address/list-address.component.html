@@ -1,0 +1,40 @@
+<ng-container *ngIf="loading; else history">
+  <p>Carregando...</p>
+</ng-container>
+
+<ng-template #history>
+  <ng-container *ngIf="history$ | async as searches">
+    <table mat-table class="w-100" [dataSource]="searches" [trackBy]="trackById" *ngIf="searches.length > 0">
+      <ng-container matColumnDef="cep">
+        <th mat-header-cell *matHeaderCellDef scope="col">CEP</th>
+        <td mat-cell *matCellDef="let search">{{ search.cep }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef scope="col">Endereço</th>
+        <td mat-cell *matCellDef="let search">
+          {{ search.address.logradouro }} - {{ search.address.bairro }} -
+          {{ search.address.localidade }}/{{ search.address.uf }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef scope="col">Data</th>
+        <td mat-cell *matCellDef="let search">{{ search.date | date: 'dd/MM/yyyy - HH:mm' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>
+        </th>
+        <td mat-cell *matCellDef="let search">
+          <button type="button" mat-icon-button (click)="remove(search.id)">
+            <mat-icon>close</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns" [attr.data-cep]="row.cep"></tr>
+    </table>
+  </ng-container>
+</ng-template>
