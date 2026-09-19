@@ -72,7 +72,7 @@ O arquivo `README.md` será atualizado ao longo do desenvolvimento, contendo as 
 * [x] Principais recursos
 * [x] Principais desafios
 
-## Como executar o projeto
+# Como executar o projeto
 
 ### Pré-requisitos
 
@@ -87,6 +87,7 @@ cd sccon-busca-cep
 npm install
 npm start
 ```
+---
 
 # PR 01 - Cria a estrutura inicial do projeto Angular
 
