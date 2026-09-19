@@ -1,4 +1,4 @@
-<img width="1917" height="950" alt="image" src="https://github.com/user-attachments/assets/2c36e2d2-b91f-403d-8122-fc96552ba067" /># SCCON Busca CEP
+# SCCON Busca CEP
 
 Esse projeto faz parte de uma etapa do processo seletivo da empresa SCCON para desenvolvedores Front-end, com o objetivo de testar conhecimentos e habilidades na utilização de Angular, CSS/HTML5 e TypeScript.
 
