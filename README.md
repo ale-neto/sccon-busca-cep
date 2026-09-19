@@ -18,7 +18,7 @@ O arquivo `README.md` será atualizado ao longo do desenvolvimento, contendo as 
 
 ## Check-list
 
-# Requisitos do Teste
+### Requisitos do Teste
 
 * [x] Angular 16+
 * [x] TypeScript
@@ -41,7 +41,7 @@ O arquivo `README.md` será atualizado ao longo do desenvolvimento, contendo as 
 * [x] Componente de lista separado
 * [x] Tabela de resultados
 
-# Requisitos Visuais
+### Requisitos Visuais
 
 * [x] Logo SCCON em SVG
 * [ ] Menu `#132745`
@@ -58,12 +58,11 @@ O arquivo `README.md` será atualizado ao longo do desenvolvimento, contendo as 
 * [ ] Loader
 * [x] Excluir buscas
 * [x] Persistência dos dados
-
   * [ ] REST / Mock Server
   * [x] LocalStorage
   * [ ] IndexedDB
 
-# Entrega
+### Entrega
 
 * [x] GitHub / Bitbucket
 * [x] README.md
