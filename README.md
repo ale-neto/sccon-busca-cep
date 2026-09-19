@@ -1,4 +1,4 @@
-<img width="1917" height="950" alt="image" src="https://github.com/user-attachments/assets/2c36e2d2-b91f-403d-8122-fc96552ba067" /># SCCON Busca CEP
+# SCCON Busca CEP
 
 Esse projeto faz parte de uma etapa do processo seletivo da empresa SCCON para desenvolvedores Front-end, com o objetivo de testar conhecimentos e habilidades na utilização de Angular, CSS/HTML5 e TypeScript.
 
@@ -193,6 +193,14 @@ readonly loading$ = this.loadingSubject.asObservable();
 * Para salvar os endereços, decidi utilizar o `localStorage` por ter mais domínio e saber como utilizá-lo, mesmo sabendo da limitação de armazenamento de 5MB. Caso o volume de dados fosse maior, eu iria optar pelo `IndexedDB`, porém, por não ter domínio de como utilizá-lo, optei pelo `localStorage`.
 
 ## Screenshots
+<img width="1917" height="958" alt="image" src="https://github.com/user-attachments/assets/27927a6b-f650-4e99-a182-5d40e980bed5" />
+<img width="1487" height="957" alt="image" src="https://github.com/user-attachments/assets/b0c3b4c1-f61c-48e6-be8d-9af40b9c5cd6" />
+<img width="1480" height="956" alt="image" src="https://github.com/user-attachments/assets/075bd6ca-a9a3-4a7b-b667-edc5c6d22c20" />
+<img width="1918" height="956" alt="image" src="https://github.com/user-attachments/assets/6fa33a80-ba42-4458-bb3e-4baeb4819142" />
+<img width="1917" height="961" alt="image" src="https://github.com/user-attachments/assets/8e5a44b0-edca-4ac5-904e-1474fb27a4aa" />
+
+
+
 
 
 
