@@ -4,13 +4,13 @@ export const routes: Routes = [
    {
       path: '',
       loadComponent: () =>
-         import('./pages/home')
+         import('./modules/home')
             .then(m => m.HomeComponent)
    },
       {
       path: 'address',
       loadComponent: () =>
-         import('./pages/address')
+         import('./modules/address')
             .then(m => m.AddressComponent)
    }
 ];

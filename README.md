@@ -16,7 +16,77 @@ Para facilitar a visualização dessa evolução, vou criar uma **branch para ca
 
 O arquivo `README.md` será atualizado ao longo do desenvolvimento, contendo as informações e decisões tomadas em cada etapa.
 
----
+## Check-list
+
+# Requisitos do Teste
+
+* [x] Angular 16+
+* [x] TypeScript
+* [x] HTML5 semântico
+* [x] Sass ou Less
+* [x] Bootstrap 5 ou Angular Material
+* [x] Layout responsivo
+* [x] Integração com ViaCEP
+* [x] Reactive Forms
+* [x] Observables / RxJS
+* [x] EventEmitters
+* [x] Máscara de CEP
+* [x] Validação com Regex
+* [x] Tratamento de erros
+* [x] Componentização
+* [x] POO
+* [x] Lazy Loading
+* [x] Header separado
+* [x] Componente de busca separado
+* [x] Componente de lista separado
+* [x] Tabela de resultados
+
+# Requisitos Visuais
+
+* [x] Logo SCCON em SVG
+* [ ] Menu `#132745`
+* [x] Botões `#D7DBDD`
+* [x] Hover dos botões
+* [x] Botões com cantos arredondados
+
+# Desafios / Diferenciais
+
+* [x] Angular Material
+* [x] Variáveis e pseudoelementos Sass/Less
+* [ ] CSS Animations
+* [ ] Transitions
+* [ ] Loader
+* [x] Excluir buscas
+* [x] Persistência dos dados
+
+  * [ ] REST / Mock Server
+  * [x] LocalStorage
+  * [ ] IndexedDB
+
+# Entrega
+
+* [x] GitHub / Bitbucket
+* [x] README.md
+* [x] Instruções de instalação
+* [x] Instruções de deploy
+* [x] Principais recursos
+* [x] Principais desafios
+
+## Como executar o projeto
+
+### Pré-requisitos
+
+* [Node.js](https://nodejs.org/) 18+
+* [Angular CLI](https://angular.dev/tools/cli) 17+ (`npm install -g @angular/cli`)
+
+### Instalação
+
+```bash
+git clone https://github.com/ale-neto/sccon-busca-cep.git
+cd sccon-busca-cep
+npm install
+npm start
+```
 
 # PR 01 - Cria a estrutura inicial do projeto Angular
 
