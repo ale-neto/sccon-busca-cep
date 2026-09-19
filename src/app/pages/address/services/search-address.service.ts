@@ -22,6 +22,7 @@ export class SearchAddressService {
 
     if (existing) {
       this.loadingSubject.next(false);
+      
       return throwError(() => new Error(`Esse CEP: ${cep} ja tem na lista.`));
     }
 

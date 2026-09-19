@@ -1,19 +1,26 @@
 <header class="app-header">
-    <nav class="navbar navbar-expand-lg" aria-label="Navegação principal">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="header-brand" routerLink="/">
                 <img class="logo" src="assets/images/logo_sccon.svg" alt="SCCON" />
             </a>
-            <button mat-icon-button class="navbar-toggler-icon-button"
-                aria-label="Abrir menu de navegação" disabled="true">
+            <button mat-icon-button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <mat-icon>menu</mat-icon>
             </button>
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" routerLink="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/address">Endereços</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Endereços
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" routerLink="/address">Buscar endereço</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

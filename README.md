@@ -168,6 +168,31 @@ readonly loading$ = this.loadingSubject.asObservable();
 <img width="1920" height="950" alt="image" src="https://github.com/user-attachments/assets/01d07a85-3775-4035-980b-cff35faa9387" />
 <img width="1918" height="954" alt="image" src="https://github.com/user-attachments/assets/b61854a6-a488-4f79-ab36-520a89f9b1f5" />
 
+# PR 07 - Adiciona Localstorage e ajusta a responsividade dos componentes 
+
+## O que foi feito?
+
+* Adição do Bootstrap JS à configuração do `angular.json`.
+* Atualização do componente `header` para utilizar os componentes Bootstrap Collapse e Dropdown na criação do submenu Buscar endereço.
+* Adição do `MatIcon` ao componente `header`.
+* Atualização do SCSS do `header` para suportar diferentes tamanhos de tela.
+* Adição de rolagem horizontal à tabela de `history` para adaptação a telas menores.
+* Atualização do `HistoryAddressService` para persistir o `history` no `localStorage`.
+* Restauração dos objetos `Date` ao carregar o `history` armazenado.
+* Centralização da atualização do estado do `history` no serviço.
+* Implementação de geração de IDs únicos para os registros do `history`.
+* Correção do `SearchAddressService` para não iniciar o estado de carregamento ao identificar um CEP duplicado, evitando que ele ficasse preso em `true`.
+* Mudança no nome da pasta `pages` para `modules`.
+
+## Desafios
+
+* Tentei fazer o ajuste para o `header` ficar responsivo, porém as animações não estavam carregando. Investigando, descobri que faltava o `node_modules/bootstrap/dist/js/bootstrap.bundle.min.js` no `angular.json`. Após a adição, a animação do submenu funcionou corretamente.
+
+## Decisões Técnicas
+
+* Para salvar os endereços, decidi utilizar o `localStorage` por ter mais domínio e saber como utilizá-lo, mesmo sabendo da limitação de armazenamento de 5MB. Caso o volume de dados fosse maior, eu iria optar pelo `IndexedDB`, porém, por não ter domínio de como utilizá-lo, optei pelo `localStorage`.
+
+## Screenshots
 
 
 
