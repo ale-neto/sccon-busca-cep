@@ -49,7 +49,7 @@ O arquivo `README.md` será atualizado ao longo do desenvolvimento, contendo as 
 * [x] Hover dos botões
 * [x] Botões com cantos arredondados
 
-# Desafios / Diferenciais
+### Desafios / Diferenciais
 
 * [x] Angular Material
 * [x] Variáveis e pseudoelementos Sass/Less
